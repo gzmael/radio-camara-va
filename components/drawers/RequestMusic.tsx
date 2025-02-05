@@ -67,12 +67,12 @@ export function RequestMusic() {
   return (
     <DrawerTemplate title="Pedir Música">
       {requestState?.state === null && (
-        <VStack className="space-y-0.5">
+        <VStack className="gap-2 mt-4">
           <Controller
             control={control}
             name="nome"
             render={({ field: { onChange, value }, fieldState: { error } }) => (
-              <VStack className="w-full max-w-[300px] rounded-md border border-background-200 p-4">
+              <VStack className="w-full">
                 <FormControl
                   isInvalid={!!error}
                   size="md"
@@ -81,10 +81,13 @@ export function RequestMusic() {
                   isRequired={false}
                 >
                   <FormControlLabel>
-                    <FormControlLabelText>Password</FormControlLabelText>
+                    <FormControlLabelText className="text-2xl text-white uppercase font-body">
+                      Nome
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input className="my-1">
+                  <Input className="my-1 w-[320px] h-[50px] bg-white/50 border-0">
                     <InputField
+                      className="text-lg font-body text-gray-50"
                       type="text"
                       placeholder="Seu nome"
                       value={value}
@@ -106,7 +109,7 @@ export function RequestMusic() {
             control={control}
             name="artista"
             render={({ field: { onChange, value }, fieldState: { error } }) => (
-              <VStack className="w-full max-w-[300px] rounded-md border border-background-200 p-4">
+              <VStack className="w-full">
                 <FormControl
                   isInvalid={!!error}
                   size="md"
@@ -115,11 +118,13 @@ export function RequestMusic() {
                   isRequired={false}
                 >
                   <FormControlLabel>
-                    <FormControlLabelText>Password</FormControlLabelText>
+                    <FormControlLabelText className="text-2xl text-white uppercase font-body">
+                      Artista
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input className="my-1">
+                  <Input className="my-1 w-[320px] h-[50px] bg-white/50 border-0">
                     <InputField
-                      type="text"
+                      className="text-lg font-body text-gray-50"
                       placeholder="Nome do Artista ou Banda"
                       value={value}
                       onChangeText={onChange}
@@ -139,7 +144,7 @@ export function RequestMusic() {
             control={control}
             name="musica"
             render={({ field: { onChange, value }, fieldState: { error } }) => (
-              <VStack className="w-full max-w-[300px] rounded-md border border-background-200 p-4">
+              <VStack className="w-full">
                 <FormControl
                   isInvalid={!!error}
                   size="md"
@@ -148,15 +153,18 @@ export function RequestMusic() {
                   isRequired={false}
                 >
                   <FormControlLabel>
-                    <FormControlLabelText>Password</FormControlLabelText>
+                    <FormControlLabelText className="text-2xl text-white uppercase font-body">
+                      Música
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input className="my-1">
+                  <Input className="my-1 w-[320px] h-[50px] bg-white/50 border-0">
                     <InputField
                       type="text"
                       placeholder="Música que deseja ouvir"
                       value={value}
                       onChangeText={onChange}
                       returnKeyType="next"
+                      className="text-lg font-body text-gray-50"
                     />
                   </Input>
                   <FormControlError>
@@ -172,7 +180,7 @@ export function RequestMusic() {
             control={control}
             name="email"
             render={({ field: { onChange, value }, fieldState: { error } }) => (
-              <VStack className="w-full max-w-[300px] rounded-md border border-background-200 p-4">
+              <VStack className="w-full">
                 <FormControl
                   isInvalid={!!error}
                   size="md"
@@ -181,15 +189,18 @@ export function RequestMusic() {
                   isRequired={false}
                 >
                   <FormControlLabel>
-                    <FormControlLabelText>Password</FormControlLabelText>
+                    <FormControlLabelText className="text-2xl text-white uppercase font-body">
+                      Localização
+                    </FormControlLabelText>
                   </FormControlLabel>
-                  <Input className="my-1">
+                  <Input className="my-1 w-[320px] h-[50px] bg-white/50 border-0">
                     <InputField
                       type="text"
                       placeholder="Seu bairro ou cidade"
                       value={value}
                       onChangeText={onChange}
                       returnKeyType="next"
+                      className="text-lg font-body text-gray-50"
                     />
                   </Input>
                   <FormControlError>
@@ -203,9 +214,9 @@ export function RequestMusic() {
           />
           <Pressable
             onPress={handleSubmit(handleSendInfo)}
-            className="w-full bg-black p-2"
+            className="w-full bg-black p-2 items-center justify-center rounded-md"
           >
-            <Text className="text-lg text-white">
+            <Text className="text-2xl text-white">
               {requestState.loading ? "pedindo..." : "pedir"}
             </Text>
           </Pressable>

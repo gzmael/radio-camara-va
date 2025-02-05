@@ -24,10 +24,10 @@ export function SocialMediaIconLink({
       onPress={() => Linking.openURL(url)}
       {...rest}
     >
-      <Feather name={icon} size={24} color="white" opacity={0.7} />
+      <Feather name={icon} size={38} color="white" opacity={0.7} />
       <VStack className="ml-3">
-        <Text className="mb-[-2.5px] text-white text-xl">{title}</Text>
-        <Text className="text-black text-lg">{body}</Text>
+        <Text className="mb-[-2.5px] text-white text-3xl">{title}</Text>
+        <Text className="text-black text-xl">{body}</Text>
       </VStack>
     </Pressable>
   );

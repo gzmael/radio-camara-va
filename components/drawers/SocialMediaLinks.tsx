@@ -6,7 +6,7 @@ import { VStack } from "../ui/vstack";
 export function SocialMediaLinks() {
   return (
     <DrawerTemplate title="Links">
-      <VStack space="sm">
+      <VStack space="sm" className="mt-4">
         {socialLinks.map((link) => (
           <SocialMediaIconLink
             key={link.title}

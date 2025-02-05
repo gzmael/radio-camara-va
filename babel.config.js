@@ -21,6 +21,7 @@ module.exports = function (api) {
           alias: {
             "@": "./",
             "tailwind.config": "./tailwind.config.js",
+            "@unitools/image": "@unitools/image-expo",
           },
         },
       ],

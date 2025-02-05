@@ -23,7 +23,9 @@ export const DrawerTemplate = ({
       style={styles.button}
     >
       <VStack style={styles.container} {...props}>
-        <Text className="text-black text-6xl opacity-50">{title}</Text>
+        <Text className="text-black text-6xl opacity-50 leading-tight">
+          {title}
+        </Text>
         {children}
       </VStack>
     </LinearGradient>

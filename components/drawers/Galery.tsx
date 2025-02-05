@@ -6,13 +6,14 @@ import { Image } from "../ui/image";
 
 export function Galery() {
   return (
-    <DrawerTemplate title="Galeria">
-      <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-        <VStack className="space-y-4">
+    <DrawerTemplate title="Galeria" className="w-full">
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <VStack space="2xl">
           {galery.map((img, index) => (
             <Image
               alt="Galeria"
-              className="w-full h-32 rounded-md bg-cover"
+              size="none"
+              className="w-full max-h-44 max-w-[320px] rounded-md"
               key={index}
               source={img}
             />
