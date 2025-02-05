@@ -2,25 +2,44 @@
   "expo": {
     "name": "radio-camara-va",
     "slug": "radio-camara-va",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1.0.5",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      },
+      "bundleIdentifier": "com.baitasolucoes.radiocmva"
     },
     "android": {
+      "versionCode": 6,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.baitasolucoes.radiocmva",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "cover",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/icon.png"
     },
     "plugins": [
       "expo-router",
