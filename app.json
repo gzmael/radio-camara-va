@@ -19,7 +19,8 @@
       "infoPlist": {
         "UIBackgroundModes": [
           "audio"
-        ]
+        ],
+        "ITSAppUsesNonExemptEncryption": false
       },
       "bundleIdentifier": "com.baitasolucoes.radiocmva"
     },
